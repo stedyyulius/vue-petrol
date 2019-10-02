@@ -4,6 +4,7 @@ ul {
   overflow: hidden;
   background-color: white;
   padding: 0 20px 0 20px;
+  font-weight: bold;
 }
 
 li {
