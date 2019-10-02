@@ -2,14 +2,26 @@
   padding: 20px 140px 140px 140px;
 }
 
+.wide-box {
+  background-color: white;
+  margin-top: 30px;
+}
+
 .box {
   background-color: white;
   margin-top: 30px;
+  width: 47%;
 }
 
 .box-title {
   padding: 15px;
   border-bottom: var(--border-main);
+  display: flex;
+  justify-content: space-between;
+}
+
+.box-title-icon img {
+  margin-left: 10px;
 }
 
 .right-item {
@@ -38,11 +50,19 @@
 .fuel-box {
   border: var(--border-main);
   padding: 15px 15px 10 15px;
-  width: 40%;
+  width: 48%;
+  font-size: 10px;
+  font-weight: bold;
 }
 
 .fuel-box-title {
-  padding: 8px;
+  padding: 10px;
+  display: flex;
+}
+
+.fuel-box-title b {
+  margin-top: 4px;
+  margin-left: 8px;
 }
 
 .fuel-price {
@@ -61,17 +81,17 @@
   height: 0;
   border-style: solid;
   border-width: 0 0 50px 50px;
-  border-color: transparent transparent #54b06b transparent;
+  border-color: transparent transparent var(--active-color) transparent;
   position: relative;
-  margin-left: 45%;
-  bottom: 35px;
+  margin-left: 37%;
+  bottom: 29px;
   line-height: 0%;
 }
 
 .fuel-price-amount {
   position: relative;
-  bottom: 74px;
-  left: 370px;
+  bottom: 62px;
+  left: 80%;
   line-height: 0%;
 }
 
@@ -82,20 +102,66 @@
 }
 
 .fuel-location p {
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 .fuel-location img {
   width: 10px;
   height: 10px;
-  margin-top: 20px;
-  margin-left: 20px;
+  margin-top: 10px;
+  margin-left: 10px;
 }
 
 .fuel-box-footer {
   background-color: var(--dark-bg);
-  height: 50px;
+  height: 25px;
   text-align: center;
-  padding-top: 35px;
+  padding-top: 15px;
   color: var(--active-color);
+}
+
+.shopping-box {
+  border: var(--border-main);
+  overflow: hidden;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.shopping-product {
+  float: left;
+}
+
+.shopping-name {
+  float: left;
+  padding-top: 5px;
+}
+
+.shopping-amount {
+  padding: 0px 20px 10px 10px;
+  float: right;
+  display: flex;
+}
+
+.shopping-discount {
+  padding-top: 15px;
+}
+
+.shopping-discount p {
+  font-size: 10px;
+  margin: 0;
+  color: #566575;
+}
+
+.shopping-discount b {
+  margin: 0;
+  color: #566575;
+}
+
+.shopping-price {
+  padding-top: 20px;
+  margin-left: 30px;
+}
+
+.shopping-price b {
+  color: #39b54a;
 }

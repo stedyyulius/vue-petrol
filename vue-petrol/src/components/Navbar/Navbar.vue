@@ -24,7 +24,8 @@
     <li>
       <a href="#contact">Blog</a>
     </li>
-    <li style="float:right">
+    <li class="right-navigation">
+      <img src="../../assets/personIcon.png" />
       <a class="active" href="#about">Hi Jenifer</a>
     </li>
   </ul>

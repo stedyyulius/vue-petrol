@@ -30,3 +30,14 @@ li img:hover {
 
 .active {
 }
+
+.right-navigation {
+  float: right;
+  display: flex;
+  margin-right: 20px;
+}
+
+.right-navigation img {
+  margin-top: -18px;
+  margin-right: -35px;
+}
