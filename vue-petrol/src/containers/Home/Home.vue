@@ -54,66 +54,22 @@
             <img src="../../assets/questionMark.png" />
           </div>
           <div class="box-body">
-            <div class="shopping-box">
+            <div class="shopping-box" v-for="(item, index) in shoppingList" v-bind:key="index">
               <div class="shopping-product">
-                <img src="../../assets/oreo-icon.png" />
+                <img :src="item.imgUrl" />
               </div>
               <div class="shopping-name">
                 <img src="../../assets/wool-icon.png" />
                 <br />
-                <b>Oreo Mini Vanilla Cup</b>
+                <b>{{item.name}}</b>
               </div>
               <div class="shopping-amount">
                 <div class="shopping-discount">
                   <p>Discount</p>
-                  <b>40%</b>
+                  <b>{{item.discount || 0}}%</b>
                 </div>
                 <div class="shopping-price">
-                  <b>$8.50</b>
-                </div>
-                <div class="shopping-price">
-                  <img src="../../assets/trashcan-icon.png" />
-                </div>
-              </div>
-            </div>
-            <div class="shopping-box">
-              <div class="shopping-product">
-                <img src="../../assets/oreo-icon.png" />
-              </div>
-              <div class="shopping-name">
-                <img src="../../assets/wool-icon.png" />
-                <br />
-                <b>Oreo Mini Vanilla Cup</b>
-              </div>
-              <div class="shopping-amount">
-                <div class="shopping-discount">
-                  <p>Discount</p>
-                  <b>40%</b>
-                </div>
-                <div class="shopping-price">
-                  <b>$8.50</b>
-                </div>
-                <div class="shopping-price">
-                  <img src="../../assets/trashcan-icon.png" />
-                </div>
-              </div>
-            </div>
-            <div class="shopping-box">
-              <div class="shopping-product">
-                <img src="../../assets/oreo-icon.png" />
-              </div>
-              <div class="shopping-name">
-                <img src="../../assets/wool-icon.png" />
-                <br />
-                <b>Oreo Mini Vanilla Cup</b>
-              </div>
-              <div class="shopping-amount">
-                <div class="shopping-discount">
-                  <p>Discount</p>
-                  <b>40%</b>
-                </div>
-                <div class="shopping-price">
-                  <b>$8.50</b>
+                  <b>{{item.latestPrice}}</b>
                 </div>
                 <div class="shopping-price">
                   <img src="../../assets/trashcan-icon.png" />
@@ -121,6 +77,31 @@
               </div>
             </div>
           </div>
+          <div class="shopping-total">
+            Total:
+            <b>${{totalPrice}}</b>
+          </div>
+        </div>
+      </div>
+      <div class="wide-box">
+        <div class="box-title">
+          <b>
+            Today's top
+            <span>groceries</span> specials
+          </b>
+        </div>
+        <div class="box-body">
+          <div class="groceries">
+            <div class="grocery-item">
+              <img src="../../assets/trashcan-icon.png" />
+              <br />
+              <b>Oreo</b>
+            </div>
+          </div>
+        </div>
+        <div class="shopping-total">
+          Total:
+          <b>${{totalPrice}}</b>
         </div>
       </div>
     </div>

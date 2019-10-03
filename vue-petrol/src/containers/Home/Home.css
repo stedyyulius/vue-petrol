@@ -1,5 +1,6 @@
 .content {
   padding: 20px 140px 140px 140px;
+  background-color: var(--dark-bg);
 }
 
 .wide-box {
@@ -11,6 +12,7 @@
   background-color: white;
   margin-top: 30px;
   width: 47%;
+  padding: 10px;
 }
 
 .box-title {
@@ -131,13 +133,20 @@
   float: left;
 }
 
+.shopping-product img {
+  width: 100px;
+}
+
 .shopping-name {
   float: left;
   padding-top: 5px;
+  font-size: 12px;
+  width: 200px;
+  overflow: hidden;
 }
 
 .shopping-amount {
-  padding: 0px 20px 10px 10px;
+  padding: 10px 20px 10px 0px;
   float: right;
   display: flex;
 }
@@ -158,10 +167,28 @@
 }
 
 .shopping-price {
-  padding-top: 20px;
-  margin-left: 30px;
+  padding-top: 25px;
+  margin-left: 15px;
 }
 
 .shopping-price b {
   color: #39b54a;
+}
+
+.shopping-total {
+  float: right;
+  margin: 0 80px 20px 0;
+}
+
+.shopping-total b {
+  color: #39b54a;
+}
+
+.groceries {
+  display: flex;
+}
+
+.grocery-item {
+  border: var(--border-main);
+  width: 200px;
 }
