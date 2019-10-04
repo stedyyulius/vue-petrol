@@ -5,14 +5,13 @@
 
 .wide-box {
   background-color: white;
-  margin-top: 30px;
 }
 
 .box {
   background-color: white;
-  margin-top: 30px;
-  width: 47%;
   padding: 10px;
+  width: 49%;
+  margin: 20px 0 40px 0;
 }
 
 .box-title {
@@ -22,39 +21,63 @@
   justify-content: space-between;
 }
 
+.box-title span {
+  color: var(--active-color);
+}
+
 .box-title-icon img {
   margin-left: 10px;
 }
 
+.box-title-icon b {
+  color: #ee662f;
+}
+
 .right-item {
   float: right;
-  color: #ee662f;
 }
 
 .box-body {
   padding: 20px 50px 20px 50px;
 }
 
+.charts {
+  padding-left: 40px;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.charts div {
+  height: 230px;
+}
+
 .fuel-select {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .flat {
   display: flex;
   justify-content: space-between;
-  margin: 20px 0 40px 0;
 }
 
 .flat p:hover {
   color: var(--active-color);
 }
 
+.stations {
+  justify-content: space-between;
+  margin: 0;
+}
+
 .fuel-box {
   border: var(--border-main);
   padding: 15px 15px 10 15px;
-  width: 48%;
   font-size: 10px;
   font-weight: bold;
+  margin-top: 15px;
+  width: 230px;
 }
 
 .fuel-box-title {
@@ -67,11 +90,15 @@
   margin-left: 8px;
 }
 
+.fuel-select {
+  margin-bottom: 20px;
+}
+
 .fuel-price {
   border: var(--border-main);
-  padding: 17px 25px 5px 25px;
+  padding: 19px 25px 5px 25px;
   margin: 10px 0 0 0;
-  height: 28px;
+  height: 58px;
 }
 
 .fuel-price-type {
@@ -79,15 +106,14 @@
 }
 
 .fuel-price-bg {
-  width: 50%;
+  width: 78%;
   height: 0;
   border-style: solid;
-  border-width: 0 0 50px 50px;
+  border-width: 0 0 55px 55px;
   border-color: transparent transparent var(--active-color) transparent;
   position: relative;
   margin-left: 37%;
-  bottom: 29px;
-  line-height: 0%;
+  bottom: 110%;
 }
 
 .fuel-price-amount {
@@ -105,18 +131,19 @@
 
 .fuel-location p {
   margin-left: 10px;
+  margin-top: 15px;
 }
 
 .fuel-location img {
   width: 10px;
   height: 10px;
-  margin-top: 10px;
+  margin-top: 15px;
   margin-left: 10px;
 }
 
 .fuel-box-footer {
   background-color: var(--dark-bg);
-  height: 25px;
+  height: 45px;
   text-align: center;
   padding-top: 15px;
   color: var(--active-color);
@@ -130,49 +157,37 @@
 }
 
 .shopping-product {
-  float: left;
+  margin-left: -20px;
 }
 
 .shopping-product img {
-  width: 100px;
+  width: 130px;
 }
 
 .shopping-name {
-  float: left;
   padding-top: 5px;
   font-size: 12px;
-  width: 200px;
-  overflow: hidden;
+  margin-left: 30px;
 }
 
 .shopping-amount {
-  padding: 10px 20px 10px 0px;
+  padding: 10px 10px 10px 0px;
   float: right;
-  display: flex;
 }
 
 .shopping-discount {
   padding-top: 15px;
 }
 
-.shopping-discount p {
-  font-size: 10px;
-  margin: 0;
-  color: #566575;
-}
-
-.shopping-discount b {
-  margin: 0;
-  color: #566575;
-}
-
 .shopping-price {
   padding-top: 25px;
-  margin-left: 15px;
+  margin-left: 25px;
 }
 
-.shopping-price b {
-  color: #39b54a;
+.shopping-delete {
+  padding-top: 25px;
+  margin-left: 30px;
+  float: right;
 }
 
 .shopping-total {
@@ -185,10 +200,24 @@
 }
 
 .groceries {
-  display: flex;
 }
 
 .grocery-item {
   border: var(--border-main);
-  width: 200px;
+  font-size: 10px;
+  margin: 20px 0 10px 35px;
+  padding-top: 15px;
+}
+
+.grocery-item img {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+.grocery-amount {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  padding: 5px 10px 5px 10px;
+  margin-top: 10px;
 }
