@@ -9,7 +9,6 @@
 
 .box {
   background-color: white;
-  padding: 10px;
   width: 49%;
   margin: 20px 0 40px 0;
 }
@@ -19,6 +18,12 @@
   border-bottom: var(--border-main);
   display: flex;
   justify-content: space-between;
+
+}
+
+.box-title b {
+  font-weight: 500;
+  font-size: 18px;
 }
 
 .box-title span {
@@ -62,7 +67,7 @@
   justify-content: space-between;
 }
 
-.flat p:hover {
+.flat p:hover, p.active {
   color: var(--active-color);
 }
 
@@ -71,6 +76,10 @@
   margin: 0;
 }
 
+.flat > p {
+  font-size: 18px;
+  font-weight: 300;
+}
 .fuel-box {
   border: var(--border-main);
   padding: 15px 15px 10 15px;
@@ -158,45 +167,69 @@
 
 .shopping-product {
   margin-left: -20px;
+  display: flex;
+  align-items: center;
 }
 
 .shopping-product img {
-  width: 130px;
+  width: 64px;
+  height: 62px;
 }
 
 .shopping-name {
+  display: flex;
+  flex-flow: column wrap;
+  margin-right: 10px;
   padding-top: 5px;
-  font-size: 12px;
-  margin-left: 30px;
+  font-size: 13px;
+  font-weight: 500;
+  max-width: calc(50% - 10px);
 }
 
-.shopping-amount {
-  padding: 10px 10px 10px 0px;
+.shopping-name img {
+  width: 73px;
+  height: 19px;
+}
+
+.shopping-right {
+  min-width: 40%;
+  width: 40%;
+  justify-items: center;
+  align-items: center;
   float: right;
 }
 
 .shopping-discount {
-  padding-top: 15px;
+  width: calc(50% - 20px);
+  /* padding-top: 15px; */
 }
 
 .shopping-price {
-  padding-top: 25px;
-  margin-left: 25px;
+  /* padding-top: 25px; */
+  width: calc(50% - 20px);
 }
 
 .shopping-delete {
-  padding-top: 25px;
-  margin-left: 30px;
   float: right;
+  width: 17px;
+  
 }
 
 .shopping-total {
   float: right;
-  margin: 0 80px 20px 0;
+  /* margin: 0 80px 20px 0; */
+  background: var(--gray-1);
+  height: 66px;
+  width: 100%;
+  padding-left: calc(55% + 20px);
+  padding-top: 16px;
+  font-size: 16px;
+  font-weight: 500;
 }
 
-.shopping-total b {
+.shopping-total > b {
   color: #39b54a;
+  margin-left: 20px;
 }
 
 .groceries {
@@ -207,6 +240,7 @@
   font-size: 10px;
   margin: 20px 0 10px 35px;
   padding-top: 15px;
+  max-width: 199px;
 }
 
 .grocery-item img {

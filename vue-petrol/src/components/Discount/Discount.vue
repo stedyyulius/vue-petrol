@@ -1,6 +1,6 @@
 <template>
   <div class="discount">
-    <p>Discount</p>
+    <p>DISCOUNT</p>
     <b>${{discountAmount || 0}}</b>
   </div>
 </template>

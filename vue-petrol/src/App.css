@@ -4,7 +4,7 @@
 }
 
 :root {
-  --border-main: 2px solid #e3e3e3;
+  --border-main: 1px solid #e3e3e3;
   --active-color: #38ac70;
   --dark-bg: #dbdbdb;
   --amount-color: #39b54a;
@@ -13,12 +13,13 @@
   --gray-2: #f1f1f1;
   --gray-3: #8b8b8b;
   --gray-4: #d8d8d8;
+  --gray-5: ##566575;
   --white-1: #ffffff;
   --black-1: #000000;
   --orange-1: #eb642e;
 }
 
-#app {
+#app {  
   font-family: "Gotham Medium";
   background-color: var(--dark-bg);
   height: 100vh;

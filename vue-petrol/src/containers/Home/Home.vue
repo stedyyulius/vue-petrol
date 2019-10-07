@@ -37,7 +37,7 @@
               <option>Darwin, 0800</option>
             </select>
             <div class="flat">
-              <p>E10</p>
+              <p class="active">E10</p>
               <p>Premium98</p>
               <p>Diesel</p>
               <p>Premium95</p>
@@ -72,23 +72,21 @@
           </div>
           <div class="box-body">
             <div class="row shopping-box" v-for="(item, index) in shoppingList" :key="index">
-              <div class="row col-md-3 shopping-product">
+              <div class="shopping-product">
                 <img :src="item.imgUrl" />
               </div>
-              <div class="col-md-5 shopping-name">
+              <div class="shopping-name">
                 <img src="../../assets/wool-icon.png" />
-                <br />
-                <br />
-                <b>{{item.name}}</b>
+                <p>{{item.name}}</p>
               </div>
-              <div class="row col-md-4 shopping-amount">
-                <div class="col-md-1 shopping-discount">
+              <div class="row shopping-right">
+                <div class="shopping-discount">
                   <Discount :amount="item.discount" />
                 </div>
-                <div class="col-md-3 shopping-price">
+                <div class="shopping-price">
                   <Price :amount="item.latestPrice" />
                 </div>
-                <div class="col-md-1 shopping-delete">
+                <div class="shopping-delete">
                   <img src="../../assets/trashcan-icon.png" />
                 </div>
               </div>
@@ -97,8 +95,9 @@
           <div class="shopping-total">
             Total:
             <b>${{totalPrice}}</b>
-          </div>
         </div>
+        </div>
+        
       </div>
       <div class="wide-box">
         <div class="box-title">
@@ -109,19 +108,22 @@
         </div>
         <div class="box-body">
           <div class="row groceries">
-            <div
-              class="col-md-2 grocery-item"
-              v-for="(special, index) of todaySpecial"
-              :key="index"
-            >
-              <img :src="special.imgUrl" />
-              <br />
-              <b>{{special.name}}</b>
-              <div class="grocery-amount">
-                <Price :amount="special.latestPrice" />
-                <Discount :amount="special.discount" />
-              </div>
-            </div>
+            <carousel>
+              <slide
+                class="grocery-item"
+                v-for="(special, index) of todaySpecial"
+                :key="index"
+              >
+                <img :src="special.imgUrl" />
+                <br />
+                <b>{{special.name}}</b>
+                <div class="grocery-amount">
+                  <Price :amount="special.latestPrice" />
+                  <Discount :amount="special.discount" />
+                </div>
+            </slide>
+            </carousel>
+
           </div>
         </div>
       </div>
