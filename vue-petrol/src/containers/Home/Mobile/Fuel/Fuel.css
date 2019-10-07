@@ -1,0 +1,118 @@
+#fuel-select {
+    height: 49px;
+    font-size: 14px;
+    font-family: 'Gotham Book';
+    color: var(--black-1);
+}
+
+.fuel > img {
+    width: 24px;
+    height: 24px;
+    margin-left: 20px;
+}
+
+.fuel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.fuel-title {
+    display: flex;
+    margin-top: 12px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 300px;
+    color: var(--black-1);
+    overflow-y: auto;
+}
+.fuel-title > div {
+    padding: 0 30px;
+}
+.fuel-title > div.active {
+    font-weight: 500px;
+    color: var(--green-1);
+}
+
+.tab-item--content {
+    background-color: var(--white-1); 
+    padding: 0 20px;
+}
+
+.fuel-box {
+    display: flex;
+    margin-right: 30px;
+    flex-flow: column wrap;
+    font-size: 12px;
+    border: 1px solid var(--gray-2);
+    min-width: 200px;
+}
+
+.fuel-box-title {
+    margin: 13px 14px;
+}
+
+.fuel-price {
+    border: 1px solid var(--gray-2);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 36px;
+    margin: 13px 14px;
+}
+
+.fuel-price > .fuel-price-type, .fuel-price-amount-text {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.fuel-price-type {
+    margin-left: 9px;
+}
+
+.fuel-price-amount {
+    color: var(--white-1);
+    display: flex;
+    
+    width: 60%;
+    height: 36px;
+    text-align: center;
+}
+
+.arrow-left {
+  width: 0;
+  height: 0; 
+  border-top: 36px solid transparent;  
+  border-right: 30px solid var(--green-1);
+}
+
+.fuel-price-amount > div:not(.arrow-left) {
+    background-color: var(--green-1);
+    width: calc(100% - 18px);
+}
+
+.fuel-location {
+    margin: 0 14px;
+    display: flex;
+    color: var(--gray-3);
+    font-weight: 500;
+    font-size: 9px;
+}
+
+.fuel-location > img {
+    width: 7px;
+    height: 9px;
+    margin-right: 2px;
+}
+
+.fuel-box-footer {
+    background-color: var(--gray-1); 
+    color: var(--green-1);
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+}

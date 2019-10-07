@@ -1,0 +1,43 @@
+.meter-bar {
+  width: 280px;
+  margin: auto;
+}
+.meter-bar--chart {
+  height: 140px;
+  margin-bottom: 20px;
+}
+
+.meter-bar--chart-image {
+  margin-bottom: -30px;
+  /* width: 280px; */
+  width: 100%;
+  height: 140px;
+}
+
+.meter-bar--chart-arrow {
+  position: absolute;
+  left: 50%;
+  margin-top: -20px;
+}
+
+.meter-bar--description {
+  display: flex;
+  height: 50px;
+
+}
+
+.credit-score {
+  width: 50%;
+  background-color: #e3e3e3;
+  text-align: center;
+  padding-top: 13px;
+}
+
+.credit-status {
+    width: 50%;
+
+  background-color: var(--active-color);
+  text-align: center;
+  color: white;
+  padding-top: 13px;
+}

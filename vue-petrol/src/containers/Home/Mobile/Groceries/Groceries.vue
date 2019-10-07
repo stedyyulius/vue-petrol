@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container p0">
     <div clss="col-md-12">
       <div class="grocery-product" v-for="(item, index) of shoppingList" :key="index">
         <img class="grocery-image" :src="item.imgUrl" />
@@ -30,6 +30,9 @@
             </div>
             <div class="special-image">
               <img :src="special.imgUrl" />
+            </div>
+            <div class="special-fullname">
+              {{special.fullName}}
             </div>
             <div class="special-price">
               <Price :amount="special.latestPrice" />

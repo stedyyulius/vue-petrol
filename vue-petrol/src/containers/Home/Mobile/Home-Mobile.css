@@ -8,8 +8,7 @@
 .home-mobile--header {
   min-height: 56px;
   display: flex;
-  border: 1px solid black;
-  background: yellow;
+  background: var(--white-1);
   justify-content: space-between;
   border-bottom: 1px solid var(--green-1);
 }
@@ -32,12 +31,15 @@
 
 .home-mobile--navbar > div {
   width: calc(100% / 3);
-  text-align: center;
+  height: 59px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: var(--gray-1);
 }
 
 .home-mobile--navbar > div.active {
-  /* border-top: 5px solid var(--green-1); */
+  border-top: 5px solid var(--green-1);
   background: var(--white-1);
 }
 
@@ -47,4 +49,41 @@
   height: 100vh;
   padding-bottom: 200px;
   width: 100vw;
+}
+
+.tab {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.tab-item {
+    display: flex;
+    background: var(--white-1);
+    flex-flow: column wrap;
+    padding: 10px 20px;
+}
+
+.tab-item + .tab-item {
+    margin-top: 10px;
+}
+
+.tab-item--header {
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #d8d8d8;
+    margin-bottom: 20px;
+}
+
+.tab-item--header--title {
+    color: var(--black-1);
+    font-weight: 500;
+}
+
+.tab-item--header--label {
+    color: var(--orange-1);
+}
+
+.tab-item--content {
+    max-width: 100%;
 }

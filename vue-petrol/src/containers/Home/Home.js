@@ -37,7 +37,7 @@ export default {
   created: function () {
     window.addEventListener('resize', this.handleResize);
     this.calculateTotalPrice();
-    this.fillData()
+    this.fillData();
     this.handleResize();
   },
   methods: {
@@ -58,11 +58,6 @@ export default {
             data: [this.getRandomInt(), this.getRandomInt()]
           }
         ]
-      }
-
-      this.datascore = {
-        score: this.getRandomInt(),
-        label: 'Very Good' 
       }
     },
     getRandomInt() {
