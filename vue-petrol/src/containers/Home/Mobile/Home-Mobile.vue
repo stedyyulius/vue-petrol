@@ -9,11 +9,12 @@
     </header>
     <div class="home-mobile--navbar">
       <div v-for="(tab, idx) of tabsItem" :key="idx" :class="(idx === activeTab) ? 'active': ''">
-        <img :src="tab" @click="activeTab = idx" />
+        <img :src="tab[idx === activeTab ? 'selected' : 'normal']" @click="activeTab = idx" />
       </div>
     </div>
     <content class="home-mobile--content">
-      <TabScore v-if="activeTab === 0" />
+      <Dashboard v-if="activeTab === 0" />
+      <Fuel v-if="activeTab === 1" />
       <Groceries v-if="activeTab === 2" />
     </content>
   </div>
