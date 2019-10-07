@@ -1,14 +1,14 @@
 <template>
-  <div>
+  <div class="container">
     <div class="col-md-11 meter-container">
-      <img src="../../assets/meterBar.png" />
+      <img class="meter-graph" src="../../assets/meterBar.png" />
       <img class="meter-arrow" src="../../assets/meterArrow.png" />
     </div>
-    <div class="row col-md-10">
-      <div class="col-md-6 credit-score">
+    <div class="col-md-12 credit-container">
+      <div class="credit-score">
         <b>783</b>
       </div>
-      <div class="col-md-6 credit-status">
+      <div class="credit-status">
         <p>Very Good</p>
       </div>
     </div>

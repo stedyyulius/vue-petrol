@@ -48,7 +48,7 @@
 }
 
 .charts div {
-  height: 230px;
+  max-height: 280px;
 }
 
 .fuel-select {
