@@ -1,3 +1,6 @@
+import HomeMobile from './Mobile/Home-Mobile.vue';
+
+
 import Navbar from '../../components/Navbar/Navbar.vue';
 import MeterBar from '../../components/MeterBar/MeterBar.vue';
 import Chart from '../../components/Chart/Chart.js';
@@ -11,6 +14,7 @@ import { todaySpecial } from '../../specials.json';
 export default {
   name: 'Home',
   components: {
+    HomeMobile,
     Navbar,
     MeterBar,
     Chart,
@@ -19,19 +23,27 @@ export default {
   },
   data() {
     return {
+      window: {
+        width: 0
+      },
       datacollection: null,
       petrolStations,
       shoppingList,
       todaySpecial,
-      totalPrice: 0
+      totalPrice: 0,
+      datascore: null
     }
   },
   created: function () {
-    console.log(petrolStations)
+    window.addEventListener('resize', this.handleResize);
     this.calculateTotalPrice();
     this.fillData()
+    this.handleResize();
   },
   methods: {
+    handleResize() {
+      this.window.width = window.innerWidth;
+    },
     fillData() {
       this.datacollection = {
         labels: [this.getRandomInt(), this.getRandomInt()],
@@ -46,6 +58,11 @@ export default {
             data: [this.getRandomInt(), this.getRandomInt()]
           }
         ]
+      }
+
+      this.datascore = {
+        score: this.getRandomInt(),
+        label: 'Very Good' 
       }
     },
     getRandomInt() {
