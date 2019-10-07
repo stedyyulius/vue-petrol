@@ -108,7 +108,7 @@
         </div>
         <div class="box-body">
           <div class="row groceries">
-            <carousel>
+            <carousel class="groceries">
               <slide
                 class="grocery-item"
                 v-for="(special, index) of todaySpecial"
