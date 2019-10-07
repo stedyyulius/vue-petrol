@@ -8,6 +8,11 @@
   --active-color: #38ac70;
   --dark-bg: #dbdbdb;
   --amount-color: #39b54a;
+  --green-1: #38ac70;
+  --gray-1: #f8f8f8;
+  --white-1: #ffffff;
+  --black-1: #000000;
+  --orange-1: #eb642e;
 }
 
 #app {

@@ -1,7 +1,7 @@
 <template>
   <div>
-    <HomeMobile v-if="window.width <= 768" />
-    <div v-else>
+  <HomeMobile v-if="window.screen.width <= 768" />
+  <div>
     <Navbar />
     <div class="content">
       <div class="wide-box">
@@ -14,10 +14,10 @@
         </div>
         <div class="box-body">
           <div class="row charts">
-            <div class="col-xs-12 col-lg-5">
+            <div class="col-md-5">
               <MeterBar />
             </div>
-            <div class="col-xs-12 col-lg-6 lineChart">
+            <div class="col-md-6 lineChart">
               <Chart :chart-data="datacollection" />
             </div>
           </div>
@@ -126,7 +126,7 @@
         </div>
       </div>
     </div>
-    </div>
+  </div>
   </div>
 </template>
 
