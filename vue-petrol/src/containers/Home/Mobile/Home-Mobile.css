@@ -1,7 +1,6 @@
 .home-mobile {
   display: flex;
   flex-flow: column wrap;
-  background: red;
 }
 
 /* header start */
