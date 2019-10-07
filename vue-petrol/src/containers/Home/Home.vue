@@ -115,8 +115,7 @@
                 :key="index"
               >
                 <img :src="special.imgUrl" />
-                <br />
-                <b>{{special.name}}</b>
+                <b class="grocery-name">{{special.name}}</b>
                 <div class="grocery-amount">
                   <Price :amount="special.latestPrice" />
                   <Discount :amount="special.discount" />
