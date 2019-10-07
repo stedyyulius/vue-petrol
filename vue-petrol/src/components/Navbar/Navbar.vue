@@ -1,7 +1,7 @@
 <template>
   <ul>
-    <li>
-      <img src="../../assets/compareClubLogo.png" />
+    <li class="br">
+      <img src="../../assets/compareClubLogo.png" class="logo" />
     </li>
     <li>
       <a href="#home">Groceries</a>

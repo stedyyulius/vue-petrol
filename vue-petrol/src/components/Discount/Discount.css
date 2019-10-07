@@ -1,10 +1,13 @@
 .discount p {
-  font-size: 10px;
+  font-size: 9px;
+  text-transform: uppercase;
   margin: 0;
-  color: #566575;
+  color: var(--gray-5);
 }
 
 .discount b {
   margin: 0;
-  color: #566575;
+  color: var(--gray-5);
+  font-weight: 500;
+  font-size: 16px;
 }

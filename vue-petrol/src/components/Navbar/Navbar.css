@@ -4,30 +4,33 @@ ul {
   overflow: hidden;
   background-color: white;
   padding: 0 20px 0 20px;
-  font-weight: bold;
+  font-weight: 500;
+  font-size: 16px;
+  height: 56px;
+  width: 100%;
 }
 
 li {
+  height: 100%;
   float: left;
 }
 
-li a,
-img {
+.br {
+  border-right: var(--border-main);
+}
+
+li a:not(.right-navigation), .logo {
   display: block;
   color: black;
   text-align: center;
-  padding: 14px 16px;
+  padding: 15px 16px 15px 16px;
   text-decoration: none;
 }
 
 li a:hover {
-  border-right: var(--border-main);
   color: var(--active-color);
 }
 
-li img:hover {
-  border-right: var(--border-main);
-}
 
 .active {
 }
@@ -35,10 +38,7 @@ li img:hover {
 .right-navigation {
   float: right;
   display: flex;
-  margin-right: 20px;
+  justify-self: flex-end;
+  align-items: center;
 }
 
-.right-navigation img {
-  margin-top: -18px;
-  margin-right: -35px;
-}
