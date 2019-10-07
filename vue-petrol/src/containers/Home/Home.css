@@ -45,7 +45,10 @@
 .box-body {
   padding: 20px 50px 20px 50px;
 }
-
+.station-header {
+  display: flex;
+  flex-flow: column wrap;
+}
 .charts {
   padding-left: 40px;
   justify-content: space-between;
@@ -80,93 +83,107 @@
   font-size: 18px;
   font-weight: 300;
 }
-.fuel-box {
-  border: var(--border-main);
-  padding: 15px 15px 10 15px;
-  font-size: 10px;
-  font-weight: bold;
-  margin-top: 15px;
-  width: 230px;
-}
-
-.fuel-box-title {
-  padding: 10px;
-  display: flex;
-}
-
-.fuel-box-title b {
-  margin-top: 4px;
-  margin-left: 8px;
-}
 
 .fuel-select {
   margin-bottom: 20px;
 }
 
+.fuel-box {
+    display: flex;
+    flex-flow: column wrap;
+    font-size: 12px;
+    border: 1px solid var(--gray-2);
+    width: 100%;
+}
+
+.fuel-box:not(:last-child) {
+  margin-bottom: 30px; 
+}
+
+.fuel-box-title {
+    display: flex;
+    margin: 14px 0 0 14px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.fuel-box-title > b {
+  margin-left: 10px; 
+}
+
 .fuel-price {
-  border: var(--border-main);
-  padding: 19px 25px 5px 25px;
-  margin: 10px 0 0 0;
-  height: 58px;
+    border: 1px solid var(--gray-2);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 36px;
+    margin: 13px 14px;
+}
+
+.fuel-price > .fuel-price-type, .fuel-price-amount-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 .fuel-price-type {
-  margin: 0;
-}
-
-.fuel-price-bg {
-  width: 78%;
-  height: 0;
-  border-style: solid;
-  border-width: 0 0 55px 55px;
-  border-color: transparent transparent var(--active-color) transparent;
-  position: relative;
-  margin-left: 37%;
-  bottom: 110%;
+    margin-left: 9px;
 }
 
 .fuel-price-amount {
-  position: relative;
-  bottom: 62px;
-  left: 80%;
-  line-height: 0%;
+    color: var(--white-1);
+    display: flex;
+    width: 60%;
+    height: 36px;
+    text-align: center;
+}
+
+.arrow-left {
+  width: 0;
+  height: 0; 
+  border-top: 36px solid transparent;  
+  border-right: 30px solid var(--green-1);
+}
+
+.fuel-price-amount > div:not(.arrow-left) {
+    background-color: var(--green-1);
+    width: calc(100% - 18px);
 }
 
 .fuel-location {
-  display: flex;
-  color: #8b8b8b;
-  justify-content: center;
+    margin: 0 14px;
+    display: flex;
+    color: var(--gray-3);
+    font-weight: 500;
+    font-size: 9px;
 }
 
-.fuel-location p {
-  margin-left: 10px;
-  margin-top: 15px;
-}
-
-.fuel-location img {
-  width: 10px;
-  height: 10px;
-  margin-top: 15px;
-  margin-left: 10px;
+.fuel-location > img {
+    width: 7px;
+    height: 9px;
+    margin-right: 2px;
 }
 
 .fuel-box-footer {
-  background-color: var(--dark-bg);
-  height: 45px;
-  text-align: center;
-  padding-top: 15px;
-  color: var(--active-color);
+    background-color: var(--gray-1); 
+    color: var(--green-1);
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
 }
 
 .shopping-box {
   border: var(--border-main);
   overflow: hidden;
-  padding: 10px;
+  padding: 10px 0 10px 0;
   margin-bottom: 20px;
 }
 
 .shopping-product {
-  margin-left: -20px;
+  /* margin-left: -20px; */
   display: flex;
   align-items: center;
 }
@@ -179,11 +196,13 @@
 .shopping-name {
   display: flex;
   flex-flow: column wrap;
-  margin-right: 10px;
   padding-top: 5px;
   font-size: 13px;
   font-weight: 500;
   max-width: calc(50% - 10px);
+}
+.shopping-name > p {
+  margin-right: 10px;
 }
 
 .shopping-name img {
@@ -192,8 +211,7 @@
 }
 
 .shopping-right {
-  min-width: 40%;
-  width: 40%;
+  width: calc(40% - 10px);
   justify-items: center;
   align-items: center;
   float: right;

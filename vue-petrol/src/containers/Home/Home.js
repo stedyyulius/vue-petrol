@@ -6,10 +6,24 @@ import MeterBar from '../../components/MeterBar/MeterBar.vue';
 import Chart from '../../components/Chart/Chart.js';
 import Price from '../../components/Price/Price.vue';
 import Discount from '../../components/Discount/Discount.vue';
+import PoinIcon from '../../assets/pointChart.png';
 
 import { petrolStations } from '../../petrol.json';
 import { shoppingList } from '../../shopping_list.json';
 import { todaySpecial } from '../../specials.json';
+
+var PoinStyle = new Image();
+PoinStyle.src = PoinIcon;
+const CHART_STYLE = {
+  pointRadius: '7',
+  pointBackgroundColor: '#ffa000',
+  pointStyle: PoinStyle,
+  fill: false,
+  lineTension: 0,
+  borderColor: '#ffa000',
+  borderWidth: '1'
+}
+
 
 export default {
   name: 'Home',
@@ -46,16 +60,16 @@ export default {
     },
     fillData() {
       this.datacollection = {
-        labels: [this.getRandomInt(), this.getRandomInt()],
+        labels: ['JAN 19', 'FEB 19', 'MAR 19'],
         datasets: [
           {
             label: 'Data One',
-            backgroundColor: '#f87979',
-            data: [this.getRandomInt(), this.getRandomInt()]
+            ...CHART_STYLE,
+            data: [this.getRandomInt(), this.getRandomInt(), this.getRandomInt()]
           }, {
             label: 'Data One',
-            backgroundColor: '#f87979',
-            data: [this.getRandomInt(), this.getRandomInt()]
+            ...CHART_STYLE,
+            data: [this.getRandomInt(), this.getRandomInt(), this.getRandomInt()]
           }
         ]
       }

@@ -32,37 +32,42 @@
               <img src="../../assets/questionMark.png" />
             </div>
           </div>
-          <div class="box-body">
-            <select class="form-control fuel-select">
-              <option>Darwin, 0800</option>
-            </select>
-            <div class="flat">
-              <p class="active">E10</p>
-              <p>Premium98</p>
-              <p>Diesel</p>
-              <p>Premium95</p>
-              <p>Unleaded91</p>
-            </div>
-            <div class="row stations">
-              <div class="fuel-box" v-for="(petrol, index) of petrolStations" :key="index">
-                <div class="fuel-box-title">
-                  <img src="../../assets/lock-icon.png" />
-                  <b>Powerfuel</b>
-                </div>
-                <div class="fuel-price">
-                  <p class="fuel-price-type">{{petrol.fuel_type || 'none'}}</p>
-                  <div class="fuel-price-bg"></div>
-                  <p class="fuel-price-amount">140.5</p>
-                </div>
-                <div class="fuel-location">
-                  <img src="../../assets/location-icon.png" />
-                  <p>43.80 km away from this station</p>
-                </div>
-                <div class="fuel-box-footer">
-                  <b>Get Directions</b>
-                </div>
+          <div class="box-body station">
+            <div class="station-header">
+              <select class="form-control fuel-select">
+                <option>Darwin, 0800</option>
+              </select>
+              <div class="flat">
+                <p class="active">E10</p>
+                <p>Premium98</p>
+                <p>Diesel</p>
+                <p>Premium95</p>
+                <p>Unleaded91</p>
               </div>
             </div>
+            <div class="row stations">
+               <div class="fuel-box" v-for="(petrol, index) of petrolStations" :key="index">
+                  <div class="fuel-box-title">
+                    <img src="../../assets/lock-icon.png" />
+                    <b>Powerfuel</b>
+                  </div>
+                  <div class="fuel-price">
+                    <div class="fuel-price-type">{{petrol.fuel_type || 'none'}}</div>
+                    <div class="fuel-price-amount">
+                      <div class="arrow-left"></div>
+                      <div class="fuel-price-amount-text">140.5</div>
+                    </div>
+                  </div>
+                  <div class="fuel-location">
+                    <img src="../../assets/location-icon.png" />
+                    <p>43.80 km away from this station</p>
+                  </div>
+                  <div class="fuel-box-footer">
+                    <b>Get Directions</b>
+                  </div>
+                </div>
+            </div>
+           
           </div>
         </div>
         <div class="box">
