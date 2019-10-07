@@ -1,0 +1,69 @@
+.grocery-product {
+  display: flex;
+  margin-top: 20px;
+  font-size: 12px;
+  border: var(--border-main);
+  padding-top: 10px;
+}
+
+.grocery-image {
+  margin: 10px;
+  width: 100px;
+}
+
+.grocery-detail {
+  width: 120px;
+  overflow: hidden;
+}
+
+.grocery-delete {
+  margin: auto;
+  padding-bottom: 25px;
+}
+
+.delete-icon {
+  width: 20px;
+}
+
+.grocery-total {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0 15px 0;
+  padding: 10px;
+  background-color: var(--dark-bg);
+}
+
+.top-groceries span {
+  color: var(--active-color);
+}
+
+.top-specials {
+  border: var(--border-main);
+  height: 200px;
+}
+
+.special-title {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+}
+
+.special-discount {
+  background-color: var(--amount-color);
+}
+
+.special-image {
+  margin: auto;
+}
+
+.special-image img {
+  max-width: 150px;
+}
+
+.special-price {
+  padding: 0 30px 0 20px;
+  display: flex;
+  justify-content: space-between;
+}

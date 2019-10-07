@@ -31,7 +31,7 @@
 }
 
 .home-mobile--navbar > div {
-  width: calc(100% /3);
+  width: calc(100% / 3);
   text-align: center;
   background: var(--gray-1);
 }
@@ -43,4 +43,8 @@
 
 .home-mobile--content {
   background: var(--gray-1);
+  overflow-y: scroll;
+  height: 100vh;
+  padding-bottom: 200px;
+  width: 100vw;
 }

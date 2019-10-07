@@ -5,5 +5,8 @@ export default {
     return {
       priceAmount: this.amount
     }
+  },
+  created: function () {
+    console.log(typeof this.amount)
   }
 }

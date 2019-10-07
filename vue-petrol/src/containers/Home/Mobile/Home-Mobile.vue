@@ -7,13 +7,14 @@
         <img src="../../../assets/burgerBar.png" />
       </div>
     </header>
-    <navbar class="home-mobile--navbar">
+    <div class="home-mobile--navbar">
       <div v-for="(tab, idx) of tabsItem" :key="idx" :class="(idx === activeTab) ? 'active': ''">
-        <img :src="tab" />
+        <img :src="tab" @click="activeTab = idx" />
       </div>
-    </navbar>
+    </div>
     <content class="home-mobile--content">
-      <TabScore />
+      <TabScore v-if="activeTab === 0" />
+      <Groceries v-if="activeTab === 2" />
     </content>
   </div>
 </template>

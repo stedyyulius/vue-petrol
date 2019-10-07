@@ -1,9 +1,11 @@
-import TabScore from './TabScore/TabScore.vue'
+import TabScore from './TabScore/TabScore.vue';
+import Groceries from './Groceries/Groceries.vue';
 
 export default {
   name: 'HomeMobile',
   components: {
-    TabScore
+    TabScore,
+    Groceries
   },
   data() {
     return {
@@ -12,7 +14,7 @@ export default {
     }
   },
   methods: {
-    handleChangeTab (tab) {
+    handleChangeTab(tab) {
       this.activeTab = tab;
     }
   }
